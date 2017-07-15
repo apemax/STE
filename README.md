@@ -10,4 +10,8 @@ STE -e filename // Opens the file so you can edit it.
 
 STE -c filename // Creates a new file with the filename you type in and opens it to edit it.
 
+To display the help screen you can use the "-h" option:
+
+STE -h
+
 If you have any questions about this program please email me at apemax18@gmail.com.

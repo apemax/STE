@@ -1,2 +1,2 @@
 all:
-	g++ main.cpp global.cpp AMethod.cpp IMethod.cpp -o STE
+	g++ -no-pie main.cpp global.cpp AMethod.cpp IMethod.cpp -o STE
