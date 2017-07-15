@@ -16,7 +16,7 @@
 */
 // Copyright (C) 2011 - 2017 Peter Wright
 // author: Peter (apemax) Wright
-// version: 0.2.0
+// version: 0.2.1
 // Simple Text Editor (STE)
 
 #include <iostream>
@@ -46,7 +46,7 @@ int main ( int argc, char *argv[] )
     {
       cout << "Using Command line argument method..." << endl;
       cout << endl;
-      
+
       CLoption = argv[1];
 
       if (CLoption == "-h")
