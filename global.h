@@ -14,9 +14,9 @@
     You should have received a copy of the GNU General Public License
     along with STE.  If not, see <http://www.gnu.org/licenses/>.
 */
-// Copyright (C) 2011 - 2017 Peter Wright
+// Copyright (C) 2011 - 2018 Peter Wright
 // author: Peter (apemax) Wright
-// version: 0.2.1
+// version: 0.2.
 // Simple Text Editor (STE)
 
 #include <iostream>

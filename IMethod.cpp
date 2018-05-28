@@ -14,9 +14,9 @@
     You should have received a copy of the GNU General Public License
     along with STE.  If not, see <http://www.gnu.org/licenses/>.
 */
-// Copyright (C) 2011 - 2017 Peter Wright
+// Copyright (C) 2011 - 2018 Peter Wright
 // author: Peter (apemax) Wright
-// version: 0.2.1
+// version: 0.2.2
 // Simple Text Editor (STE)
 
 #include <iostream>
@@ -93,7 +93,7 @@ void IMethod()
 
                   if (File_input == "EOF")
                   {
-                      running1 = "false";
+                      running1 = false;
 
                     }
                     else
@@ -136,7 +136,7 @@ void IMethod()
 
                 if (File_input == "EOF")
                 {
-                    running2 = "false";
+                    running2 = false;
 
                 }
                 else

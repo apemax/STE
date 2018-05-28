@@ -14,9 +14,9 @@
     You should have received a copy of the GNU General Public License
     along with STE.  If not, see <http://www.gnu.org/licenses/>.
 */
-// Copyright (C) 2011 - 2017 Peter Wright
+// Copyright (C) 2011 - 2018 Peter Wright
 // author: Peter (apemax) Wright
-// version: 0.2.1
+// version: 0.2.2
 // Simple Text Editor (STE)
 
 #include <iostream>
@@ -81,36 +81,38 @@ void AMethod()
           {
               bool running1 = true;
 
-              cin.ignore();
+              ofstream Output_file(File_name, ios::out | ios::app);
 
               cout << "Type what you want to go in the text file and hit enter. To finish editing this file type in EOF.: " << endl;
 
               while (running1)
               {
 
-              getline(cin, File_input);
+                getline(cin, File_input);
 
-              if (File_input == "EOF")
-              {
-                  running1 = "false";
+                if (File_input == "EOF")
+                {
+                  running1 = false;
+                }
+                else
+                {
+                  cout << "Writing to file..." << endl;
 
+                  if (Output_file.is_open()) //Checks to see if it can open the file.
+                  {
+                    Output_file << File_input << endl;
+                  }
+                  else
+                  {
+                    cout << "Can't open file." << endl;
+                  }
+                }
               }
-              else
-              {
 
-              }
-              cout << "Writing to file..." << endl;
+              cout << "Closing file..." << endl;
 
-              ofstream Output_file(File_name, ios::out | ios::app);
+              Output_file.close(); //Closes the file stream.
 
-              if (Output_file.is_open()) //Checks to see if it can open the file.
-              {
-                  Output_file << File_input << endl;
-
-                  Output_file.close(); //Closes the file stream.
-              }
-              else cout << "Can't open file." << endl;
-              }
               cout << "Done." << endl;
 
               break;
@@ -120,32 +122,31 @@ void AMethod()
           {
               bool running2 = true;
 
-              cin.ignore();
+              ofstream Output_file(File_name, ios::out | ios::app);
 
               cout << "Type what you want to go in the text file and hit enter. To finish editing this file type in EOF.: " << endl;
 
               while (running2)
               {
 
-              getline(cin, File_input);
+                getline(cin, File_input);
 
-              if (File_input == "EOF")
-              {
-                  running2 = "false";
+                if (File_input == "EOF")
+                {
+                  running2 = false;
 
+                }
+                else
+                {
+
+                cout << "Writing to file..." << endl;
+
+                Output_file << File_input << endl;
+
+                }
               }
-              else
-              {
-
-              }
-              cout << "Writing to file..." << endl;
-
-              ofstream Output_file(File_name, ios::out | ios::app);
-
-              Output_file << File_input << endl;
 
               Output_file.close(); // closes the file stream.
-              }
 
               cout << "Done." << endl;
 
