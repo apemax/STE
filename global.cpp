@@ -16,7 +16,7 @@
 */
 // Copyright (C) 2011 - 2018 Peter Wright
 // author: Peter (apemax) Wright
-// version: 0.2.2
+// version: 0.2.3
 // Simple Text Editor (STE)
 
 #include <iostream>

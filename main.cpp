@@ -16,7 +16,7 @@
 */
 // Copyright (C) 2011 - 2018 Peter Wright
 // author: Peter (apemax) Wright
-// version: 0.2.2
+// version: 0.2.3
 // Simple Text Editor (STE)
 
 #include <iostream>
@@ -26,49 +26,46 @@ using namespace std;
 
 int main ( int argc, char *argv[] )
 {
-    cout << "Simple Text Editor (STE) Copyright (C) 2011 - 2018 Peter Wright" << endl;
-    cout << "This program comes with ABSOLUTELY NO WARRANTY; for details see the file named COPYING in the program folder." << endl;
-    cout << "This is free software, and you are welcome to redistribute it" << endl;
-    cout << "under certain conditions; for details see the file named COPYING in the program folder." << endl;
+  cout << "Simple Text Editor (STE) Copyright (C) 2011 - 2018 Peter Wright" << endl;
+  cout << "This program comes with ABSOLUTELY NO WARRANTY; for details see the file named COPYING in the program folder." << endl;
+  cout << "This is free software, and you are welcome to redistribute it" << endl;
+  cout << "under certain conditions; for details see the file named COPYING in the program folder." << endl;
+  cout << endl;
+
+  cout << "Welcome to the Simple Text Editor V0.2.3. (STE)" << endl;
+  cout << endl;
+
+  if (argc <= 1)
+  {
+    cout << "Using interactive method..." << endl;
     cout << endl;
 
-    cout << "Welcome to the Simple Text Editor V0.2.2. (STE)" << endl;
+    IMethod();
+  }
+  else
+  {
+    cout << "Using Command line argument method..." << endl;
     cout << endl;
 
-    if (argc <= 1)
+    CLoption = argv[1];
+
+    if (CLoption == "-h")
     {
-      cout << "Using interactive method..." << endl;
+      cout << "Usage: STE [option] file" << endl;
       cout << endl;
-
-      IMethod();
-    }
-    else
-    {
-      cout << "Using Command line argument method..." << endl;
+      cout << "Options:" << endl;
+      cout << "-o   Outputs the contents of the file." << endl;
+      cout << "-e   Opens the file so you can edit it." << endl;
+      cout << "-c   Creates a new file with the filename you type in and opens it to edit it." << endl;
       cout << endl;
+      cout << "Example:" << endl;
+      cout << "STE -o textfile" << endl;
 
-      CLoption = argv[1];
-
-      if (CLoption == "-h")
-      {
-        cout << "Usage: STE [option] file" << endl;
-        cout << endl;
-        cout << "Options:" << endl;
-        cout << "-o   Outputs the contents of the file." << endl;
-        cout << "-e   Opens the file so you can edit it." << endl;
-        cout << "-c   Creates a new file with the filename you type in and opens it to edit it." << endl;
-        cout << endl;
-        cout << "Example:" << endl;
-        cout << "STE -o textfile" << endl;
-
-        return 0;
-      }
-
-      File_name = argv[2];
-
-
-      AMethod();
+      return 0;
     }
 
+    File_name = argv[2];
 
+    AMethod();
+  }
 }

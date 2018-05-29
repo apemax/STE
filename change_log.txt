@@ -11,3 +11,7 @@
 14/05/2017-V0.2.0: Added the ability to view, edit and create text files using command line arguments.
 
 15/05/2017-V0.2.1: Added a "help" command line option.
+
+27/05/2018-V0.2.2: Fixes AMethod so it actually works correctly.
+
+28/05/2018-V0.2.3: Fixes IMethod so it actually works correctly.
