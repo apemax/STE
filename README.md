@@ -15,3 +15,20 @@ STE -c filename // Creates a new file with the filename you type in and opens it
 To display the help screen you can use the "-h" option:
 
 STE -h
+
+## Building
+
+### Linux
+
+To compile, clone the STE repo:
+
+~~~
+git clone https://github.com/apemax/STE.git
+~~~
+
+Then cd to the STE directory and run make:
+
+~~~
+cd STE
+make
+~~~
