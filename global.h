@@ -14,9 +14,8 @@
     You should have received a copy of the GNU General Public License
     along with STE.  If not, see <http://www.gnu.org/licenses/>.
 */
-// Copyright (C) 2011 - 2018 Peter Wright
+// Copyright (C) 2011 - 2019 Peter Wright
 // author: Peter (apemax) Wright
-// version: 0.2.3
 // Simple Text Editor (STE)
 
 #include <iostream>
@@ -26,10 +25,7 @@ using namespace std;
 #ifndef GLOBAL_H
 #define GLABAL_H
 
-extern string File_name;
-extern string CLoption;
-
-void AMethod();
-void IMethod();
+void AMethod(string CLoptionF, string File_nameF);
+void IMethod(string File_nameF);
 
 #endif // GLOBAL_H

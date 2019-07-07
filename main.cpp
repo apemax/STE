@@ -14,25 +14,25 @@
     You should have received a copy of the GNU General Public License
     along with STE.  If not, see <http://www.gnu.org/licenses/>.
 */
-// Copyright (C) 2011 - 2018 Peter Wright
+// Copyright (C) 2011 - 2019 Peter Wright
 // author: Peter (apemax) Wright
-// version: 0.2.3
 // Simple Text Editor (STE)
 
-#include <iostream>
-#include <fstream>
 #include "global.h"
 using namespace std;
 
 int main ( int argc, char *argv[] )
 {
-  cout << "Simple Text Editor (STE) Copyright (C) 2011 - 2018 Peter Wright" << endl;
+  string CLoptionM;
+  string File_nameM;
+
+  cout << "Simple Text Editor (STE) Copyright (C) 2011 - 2019 Peter Wright" << endl;
   cout << "This program comes with ABSOLUTELY NO WARRANTY; for details see the file named COPYING in the program folder." << endl;
   cout << "This is free software, and you are welcome to redistribute it" << endl;
   cout << "under certain conditions; for details see the file named COPYING in the program folder." << endl;
   cout << endl;
 
-  cout << "Welcome to the Simple Text Editor V0.2.3. (STE)" << endl;
+  cout << "Welcome to the Simple Text Editor. (STE)" << endl;
   cout << endl;
 
   if (argc <= 1)
@@ -40,16 +40,16 @@ int main ( int argc, char *argv[] )
     cout << "Using interactive method..." << endl;
     cout << endl;
 
-    IMethod();
+    IMethod(File_nameM);
   }
   else
   {
     cout << "Using Command line argument method..." << endl;
     cout << endl;
 
-    CLoption = argv[1];
+    CLoptionM = argv[1];
 
-    if (CLoption == "-h")
+    if (CLoptionM == "-h")
     {
       cout << "Usage: STE [option] file" << endl;
       cout << endl;
@@ -64,8 +64,8 @@ int main ( int argc, char *argv[] )
       return 0;
     }
 
-    File_name = argv[2];
+    File_nameM = argv[2];
 
-    AMethod();
+    AMethod(CLoptionM, File_nameM);
   }
 }

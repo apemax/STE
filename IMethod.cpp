@@ -14,18 +14,15 @@
     You should have received a copy of the GNU General Public License
     along with STE.  If not, see <http://www.gnu.org/licenses/>.
 */
-// Copyright (C) 2011 - 2018 Peter Wright
+// Copyright (C) 2011 - 2019 Peter Wright
 // author: Peter (apemax) Wright
-// version: 0.2.3
 // Simple Text Editor (STE)
 
-#include <iostream>
-#include <fstream>
 #include "global.h"
 using namespace std;
 
 // Function for the interactive method.
-void IMethod()
+void IMethod(string File_nameF)
 {
   string File_input;
   string File_contents;
@@ -47,9 +44,9 @@ void IMethod()
       {
         cout << "Type in the name of the file you want to view:" << endl;
 
-        cin >> File_name;
+        cin >> File_nameF;
 
-        ifstream view_file(File_name, ios::in);
+        ifstream view_file(File_nameF, ios::in);
 
         cout << "Trying to open text file..." << endl;
 
@@ -81,11 +78,11 @@ void IMethod()
 
         cout << "type in the name of the file you want to open to edit:" << endl;
 
-        cin >> File_name;
+        cin >> File_nameF;
 
         cin.ignore();
 
-        ofstream Output_file(File_name, ios::out | ios::app);
+        ofstream Output_file(File_nameF, ios::out | ios::app);
 
         cout << "Type what you want to go in the text file and hit enter. To finish editing this file type in EOF.: " << endl;
 
@@ -127,11 +124,11 @@ void IMethod()
 
         cout << "Type in the name of the file you want to create:" << endl;
 
-        cin >> File_name;
+        cin >> File_nameF;
 
         cin.ignore();
 
-        ofstream Output_file(File_name, ios::out | ios::app);
+        ofstream Output_file(File_nameF, ios::out | ios::app);
 
         cout << "Type what you want to go in the text file and hit enter. To finish editing this file type in EOF.: " << endl;
 

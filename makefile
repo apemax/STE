@@ -6,7 +6,7 @@ ODIR = obj
 
 BIN = STE
 
-_OBJ = main.o global.o AMethod.o IMethod.o
+_OBJ = main.o AMethod.o IMethod.o
 OBJ = $(patsubst %,$(ODIR)/%,$(_OBJ))
 
 $(ODIR)/%.o: %.cpp $(DEPS)

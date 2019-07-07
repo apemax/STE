@@ -14,18 +14,15 @@
     You should have received a copy of the GNU General Public License
     along with STE.  If not, see <http://www.gnu.org/licenses/>.
 */
-// Copyright (C) 2011 - 2018 Peter Wright
+// Copyright (C) 2011 - 2019 Peter Wright
 // author: Peter (apemax) Wright
-// version: 0.2.3
 // Simple Text Editor (STE)
 
-#include <iostream>
-#include <fstream>
 #include "global.h"
 using namespace std;
 
 // Function dealing with the command line arguments.
-void AMethod()
+void AMethod(string CLoptionF, string File_nameF)
 {
   string File_input;
   string File_contents;
@@ -35,15 +32,15 @@ void AMethod()
   do
   {
 
-    if (CLoption == "-o")
+    if (CLoptionF == "-o")
     {
       Opt1 = 1;
     }
-    else if (CLoption == "-e")
+    else if (CLoptionF == "-e")
     {
       Opt1 = 2;
     }
-    else if (CLoption == "-c")
+    else if (CLoptionF == "-c")
     {
       Opt1 = 3;
     }
@@ -52,7 +49,7 @@ void AMethod()
     {
       case 1:
       {
-        ifstream view_file(File_name, ios::in); // Opens the file stream.
+        ifstream view_file(File_nameF, ios::in); // Opens the file stream.
 
         cout << "Trying to open text file..." << endl;
 
@@ -79,7 +76,7 @@ void AMethod()
       {
         bool running1 = true;
 
-        ofstream Output_file(File_name, ios::out | ios::app);
+        ofstream Output_file(File_nameF, ios::out | ios::app);
 
         cout << "Type what you want to go in the text file and hit enter. To finish editing this file type in EOF.: " << endl;
 
@@ -120,7 +117,7 @@ void AMethod()
       {
         bool running2 = true;
 
-        ofstream Output_file(File_name, ios::out | ios::app);
+        ofstream Output_file(File_nameF, ios::out | ios::app);
 
         cout << "Type what you want to go in the text file and hit enter. To finish editing this file type in EOF.: " << endl;
 
