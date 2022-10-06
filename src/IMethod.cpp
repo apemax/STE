@@ -14,7 +14,7 @@
     You should have received a copy of the GNU General Public License
     along with STE.  If not, see <http://www.gnu.org/licenses/>.
 */
-// Copyright (C) 2011 - 2019 Peter Wright
+// Copyright (C) 2011 - 2022 Peter Wright
 // author: Peter (apemax) Wright
 // Simple Text Editor (STE)
 
@@ -48,17 +48,11 @@ void IMethod(string File_nameF)
 
         ifstream view_file(File_nameF, ios::in);
 
-        cout << "Trying to open text file..." << endl;
-
         if (view_file.is_open())
         {
-          cout << "Done." << endl;
-
-          while (getline(view_file, File_contents, '\n')) //Copies contents of the text file to the string File_contents.
+          while (getline(view_file, File_contents, '\n'))
 
           cout << File_contents << endl;
-
-          cout << "Closing file..." << endl;
 
           view_file.close();
         }
@@ -66,9 +60,6 @@ void IMethod(string File_nameF)
         {
           cout << "Can't open file." << endl;
         }
-
-        cout << "done." << endl;
-
         break;
       }
 
@@ -113,8 +104,6 @@ void IMethod(string File_nameF)
 
         Output_file.close();
 
-        cout << "Done." << endl;
-
         break;
       }
 
@@ -158,8 +147,6 @@ void IMethod(string File_nameF)
         }
 
         Output_file.close();
-
-        cout << "Done." << endl;
 
         break;
       }

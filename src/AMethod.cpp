@@ -14,7 +14,7 @@
     You should have received a copy of the GNU General Public License
     along with STE.  If not, see <http://www.gnu.org/licenses/>.
 */
-// Copyright (C) 2011 - 2019 Peter Wright
+// Copyright (C) 2011 - 2022 Peter Wright
 // author: Peter (apemax) Wright
 // Simple Text Editor (STE)
 
@@ -49,25 +49,17 @@ void AMethod(string CLoptionF, string File_nameF)
     {
       case 1:
       {
-        ifstream view_file(File_nameF, ios::in); // Opens the file stream.
+        ifstream view_file(File_nameF, ios::in);
 
-        cout << "Trying to open text file..." << endl;
-
-        if (view_file.is_open()) //Checks to see if it can open the file.
+        if (view_file.is_open())
         {
-          cout << "Done." << endl;
-
-          while (getline(view_file, File_contents, '\n')) //Copies contents of the text file to the string File_contents.
+          while (getline(view_file, File_contents, '\n'))
 
           cout << File_contents << endl;
 
-          cout << "Closing file..." << endl;
-
-          view_file.close(); //Closes the file stream.
+          view_file.close();
         }
         else cout << "Can't open file." << endl;
-
-        cout << "done." << endl;
 
         break;
       }
@@ -91,9 +83,7 @@ void AMethod(string CLoptionF, string File_nameF)
           }
           else
           {
-            cout << "Writing to file..." << endl;
-
-            if (Output_file.is_open()) //Checks to see if it can open the file.
+            if (Output_file.is_open())
             {
               Output_file << File_input << endl;
             }
@@ -104,11 +94,7 @@ void AMethod(string CLoptionF, string File_nameF)
           }
         }
 
-        cout << "Closing file..." << endl;
-
-        Output_file.close(); //Closes the file stream.
-
-        cout << "Done." << endl;
+        Output_file.close();
 
         break;
       }
@@ -134,16 +120,12 @@ void AMethod(string CLoptionF, string File_nameF)
           else
           {
 
-          cout << "Writing to file..." << endl;
-
           Output_file << File_input << endl;
 
           }
         }
 
-        Output_file.close(); // closes the file stream.
-
-        cout << "Done." << endl;
+        Output_file.close();
 
         break;
       }

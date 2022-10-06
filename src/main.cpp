@@ -14,7 +14,7 @@
     You should have received a copy of the GNU General Public License
     along with STE.  If not, see <http://www.gnu.org/licenses/>.
 */
-// Copyright (C) 2011 - 2019 Peter Wright
+// Copyright (C) 2011 - 2022 Peter Wright
 // author: Peter (apemax) Wright
 // Simple Text Editor (STE)
 
@@ -26,7 +26,7 @@ int main ( int argc, char *argv[] )
   string CLoptionM;
   string File_nameM;
 
-  cout << "Simple Text Editor (STE) Copyright (C) 2011 - 2019 Peter Wright" << endl;
+  cout << "Simple Text Editor (STE) Copyright (C) 2011 - 2022 Peter Wright" << endl;
   cout << "This program comes with ABSOLUTELY NO WARRANTY; for details see the file named COPYING in the program folder." << endl;
   cout << "This is free software, and you are welcome to redistribute it" << endl;
   cout << "under certain conditions; for details see the file named COPYING in the program folder." << endl;
@@ -37,16 +37,10 @@ int main ( int argc, char *argv[] )
 
   if (argc <= 1)
   {
-    cout << "Using interactive method..." << endl;
-    cout << endl;
-
     IMethod(File_nameM);
   }
   else
   {
-    cout << "Using Command line argument method..." << endl;
-    cout << endl;
-
     CLoptionM = argv[1];
 
     if (CLoptionM == "-h")
