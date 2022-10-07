@@ -40,10 +40,6 @@ void AMethod(string CLoptionF, string File_nameF)
     {
       Opt1 = 2;
     }
-    else if (CLoptionF == "-c")
-    {
-      Opt1 = 3;
-    }
 
     switch (Opt1)
     {
@@ -91,37 +87,6 @@ void AMethod(string CLoptionF, string File_nameF)
             {
               cout << "Can't open file." << endl;
             }
-          }
-        }
-
-        Output_file.close();
-
-        break;
-      }
-
-      case 3:
-      {
-        bool running2 = true;
-
-        ofstream Output_file(File_nameF, ios::out | ios::app);
-
-        cout << "Type what you want to go in the text file and hit enter. To finish editing this file type in EOF.: " << endl;
-
-        while (running2)
-        {
-
-          getline(cin, File_input);
-
-          if (File_input == "EOF")
-          {
-            running2 = false;
-
-          }
-          else
-          {
-
-          Output_file << File_input << endl;
-
           }
         }
 

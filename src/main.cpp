@@ -49,8 +49,7 @@ int main ( int argc, char *argv[] )
       cout << endl;
       cout << "Options:" << endl;
       cout << "-o   Outputs the contents of the file." << endl;
-      cout << "-e   Opens the file so you can edit it." << endl;
-      cout << "-c   Creates a new file with the filename you type in and opens it to edit it." << endl;
+      cout << "-e   Edit file, If no file with that name exists it will create an empty file." << endl;
       cout << endl;
       cout << "Example:" << endl;
       cout << "STE -o textfile" << endl;

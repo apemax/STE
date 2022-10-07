@@ -32,8 +32,7 @@ void IMethod(string File_nameF)
   do
   {
     cout << "If you want to open a file to view it type 1.\n";
-    cout << "If you want to open a file to edit it type 2.\n";
-    cout << "If you want to create a new file type 3.\n";
+    cout << "If you want to open a file to edit or create a new empty file to edit type 2.\n";
     cout << "If you want to exit type exit." << endl;
 
     cin >> Opt1;
@@ -98,50 +97,6 @@ void IMethod(string File_nameF)
             else
             {
               cout << "Can't open file." << endl;
-            }
-          }
-        }
-
-        Output_file.close();
-
-        break;
-      }
-
-      case 3:
-      {
-        bool running2 = true;
-
-        cout << "Type in the name of the file you want to create:" << endl;
-
-        cin >> File_nameF;
-
-        cin.ignore();
-
-        ofstream Output_file(File_nameF, ios::out | ios::app);
-
-        cout << "Type what you want to go in the text file and hit enter. To finish editing this file type in EOF.: " << endl;
-
-        while (running2)
-        {
-
-          getline(cin, File_input);
-
-          if (File_input == "EOF")
-          {
-            running2 = false;
-
-          }
-          else
-          {
-
-            if (Output_file.is_open())
-            {
-              Output_file << File_input << endl;
-            }
-
-            else
-            {
-            cout << "Can't open file." << endl;
             }
           }
         }
