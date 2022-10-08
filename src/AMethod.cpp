@@ -45,17 +45,7 @@ void AMethod(string CLoptionF, string File_nameF)
     {
       case 1:
       {
-        ifstream view_file(File_nameF, ios::in);
-
-        if (view_file.is_open())
-        {
-          while (getline(view_file, File_contents, '\n'))
-
-          cout << File_contents << endl;
-
-          view_file.close();
-        }
-        else cout << "Can't open file." << endl;
+        ViewFile(File_nameF);
 
         break;
       }

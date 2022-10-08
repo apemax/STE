@@ -14,20 +14,29 @@
     You should have received a copy of the GNU General Public License
     along with STE.  If not, see <http://www.gnu.org/licenses/>.
 */
-// Copyright (C) 2011 - 2019 Peter Wright
+// Copyright (C) 2011 - 2022 Peter Wright
 // author: Peter (apemax) Wright
 // Simple Text Editor (STE)
 
-#include <iostream>
-#include <fstream>
+#include "global.h"
 using namespace std;
 
-#ifndef GLOBAL_H
-#define GLABAL_H
+void ViewFile(string FileName)
+{
+	string File_contents;
+	
+  ifstream view_file(FileName, ios::in);
 
-void AMethod(string CLoptionF, string File_nameF);
-void IMethod(string File_nameF);
+  if (view_file.is_open())
+  {
+    while (getline(view_file, File_contents, '\n'))
 
-void ViewFile(string FileName);
+    cout << File_contents << endl;
 
-#endif // GLOBAL_H
+    view_file.close();
+  }
+  else
+  {
+    cout << "Can't open file." << endl;
+  }
+}

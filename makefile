@@ -11,7 +11,7 @@ CXXFLAGS = -I$(IDIR) -Werror -Wall -Wextra
 _DEPS = global.h
 DEPS = $(patsubst %,$(IDIR)/%,$(_DEPS))
 
-_OBJ = main.o IMethod.o AMethod.o
+_OBJ = main.o IMethod.o AMethod.o fileio.o
 OBJ = $(patsubst %,$(ODIR)/%,$(_OBJ))
 
 .SECONDEXPANSION:

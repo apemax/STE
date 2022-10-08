@@ -25,7 +25,6 @@ using namespace std;
 void IMethod(string File_nameF)
 {
   string File_input;
-  string File_contents;
   char ans1;
   int Opt1;
 
@@ -45,20 +44,8 @@ void IMethod(string File_nameF)
 
         cin >> File_nameF;
 
-        ifstream view_file(File_nameF, ios::in);
+        ViewFile(File_nameF);
 
-        if (view_file.is_open())
-        {
-          while (getline(view_file, File_contents, '\n'))
-
-          cout << File_contents << endl;
-
-          view_file.close();
-        }
-        else
-        {
-          cout << "Can't open file." << endl;
-        }
         break;
       }
 
