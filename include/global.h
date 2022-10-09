@@ -29,5 +29,6 @@ void AMethod(string CLoptionF, string File_nameF);
 void IMethod(string File_nameF);
 
 void ViewFile(string FileName);
+void EditFile(string FileName);
 
 #endif // GLOBAL_H

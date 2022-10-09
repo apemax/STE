@@ -24,8 +24,6 @@ using namespace std;
 // Function dealing with the command line arguments.
 void AMethod(string CLoptionF, string File_nameF)
 {
-  string File_input;
-  string File_contents;
   char ans1;
   int Opt1;
 
@@ -52,35 +50,7 @@ void AMethod(string CLoptionF, string File_nameF)
 
       case 2:
       {
-        bool running1 = true;
-
-        ofstream Output_file(File_nameF, ios::out | ios::app);
-
-        cout << "Type what you want to go in the text file and hit enter. To finish editing this file type in EOF.: " << endl;
-
-        while (running1)
-        {
-
-          getline(cin, File_input);
-
-          if (File_input == "EOF")
-          {
-            running1 = false;
-          }
-          else
-          {
-            if (Output_file.is_open())
-            {
-              Output_file << File_input << endl;
-            }
-            else
-            {
-              cout << "Can't open file." << endl;
-            }
-          }
-        }
-
-        Output_file.close();
+        EditFile(File_nameF);
 
         break;
       }

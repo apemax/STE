@@ -24,7 +24,6 @@ using namespace std;
 // Function for the interactive method.
 void IMethod(string File_nameF)
 {
-  string File_input;
   char ans1;
   int Opt1;
 
@@ -51,44 +50,13 @@ void IMethod(string File_nameF)
 
       case 2:
       {
-        bool running1 = true;
-
         cout << "type in the name of the file you want to open to edit:" << endl;
 
         cin >> File_nameF;
 
         cin.ignore();
 
-        ofstream Output_file(File_nameF, ios::out | ios::app);
-
-        cout << "Type what you want to go in the text file and hit enter. To finish editing this file type in EOF.: " << endl;
-
-        while (running1)
-        {
-
-          getline(cin, File_input);
-
-          if (File_input == "EOF")
-          {
-            running1 = false;
-          }
-
-          else
-          {
-
-            if (Output_file.is_open())
-            {
-              Output_file << File_input << endl;
-            }
-
-            else
-            {
-              cout << "Can't open file." << endl;
-            }
-          }
-        }
-
-        Output_file.close();
+        EditFile(File_nameF);
 
         break;
       }

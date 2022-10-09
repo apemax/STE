@@ -40,3 +40,37 @@ void ViewFile(string FileName)
     cout << "Can't open file." << endl;
   }
 }
+
+void EditFile(string FileName)
+{
+  string File_input;
+  bool running = true;
+
+  ofstream Output_file(FileName, ios::out | ios::app);
+
+  cout << "Type what you want to go in the text file and hit enter. To finish editing this file type in EOF.: " << endl;
+
+  while (running)
+  {
+
+    getline(cin, File_input);
+
+    if (File_input == "EOF")
+    {
+      running = false;
+    }
+    else
+    {
+      if (Output_file.is_open())
+      {
+        Output_file << File_input << endl;
+      }
+      else
+      {
+        cout << "Can't open file." << endl;
+      }
+    }
+  }
+
+  Output_file.close();
+}
