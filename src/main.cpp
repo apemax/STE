@@ -53,12 +53,14 @@ int main ( int argc, char *argv[] )
       cout << endl;
       cout << "Example:" << endl;
       cout << "STE -o textfile" << endl;
-
-      return 0;
     }
+    else
+    {
+      File_nameM = argv[2];
 
-    File_nameM = argv[2];
-
-    AMethod(CLoptionM, File_nameM);
+      AMethod(CLoptionM, File_nameM);
+    }
   }
+
+  return 0;
 }
